@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 
 public class Acerca_Tienda extends JInternalFrame {
-	private JPanel panel;
 
 	/**
 	 * Launch the application.
@@ -17,6 +16,7 @@ public class Acerca_Tienda extends JInternalFrame {
 			public void run() {
 				try {
 					Acerca_Tienda frame = new Acerca_Tienda();
+					frame.setMaximum(true);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -29,11 +29,10 @@ public class Acerca_Tienda extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Acerca_Tienda() {
+		setBorder(null);
+		setTitle("INFORMACION DE TIENDA Y DE LOS CREADORES");
 		setBounds(100, 100, 450, 300);
 		
-		panel = new JPanel();
-		getContentPane().add(panel, BorderLayout.CENTER);
-
 	}
 
 }

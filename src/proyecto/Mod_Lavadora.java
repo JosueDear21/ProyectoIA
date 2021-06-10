@@ -44,6 +44,7 @@ public class Mod_Lavadora extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Mod_Lavadora() {
+		setTitle("MODIFICAR LAVADORA");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 		

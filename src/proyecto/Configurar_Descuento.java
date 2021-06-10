@@ -43,6 +43,7 @@ public class Configurar_Descuento extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Configurar_Descuento() {
+		setTitle("CONFIGURACION DE DESCUENTO");
 		setBounds(100, 100, 467, 295);
 		getContentPane().setLayout(null);
 		

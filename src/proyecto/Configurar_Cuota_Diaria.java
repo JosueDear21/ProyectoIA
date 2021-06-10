@@ -33,6 +33,7 @@ public class Configurar_Cuota_Diaria extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Configurar_Cuota_Diaria() {
+		setTitle("CONFIGURACION DE CUOTA DIARIA");
 		setBounds(100, 100, 459, 300);
 		getContentPane().setLayout(null);
 		

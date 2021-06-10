@@ -31,6 +31,7 @@ public class Listar_Lavadora extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Listar_Lavadora() {
+		setTitle("LISTAR LAVADORA");
 		setBounds(100, 100, 460, 300);
 		getContentPane().setLayout(null);
 		

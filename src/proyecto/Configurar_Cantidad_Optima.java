@@ -33,6 +33,7 @@ public class Configurar_Cantidad_Optima extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Configurar_Cantidad_Optima() {
+		setTitle("CONFIGURACION DE CANTIDAD OPTIMA");
 		setBounds(100, 100, 470, 300);
 		getContentPane().setLayout(null);
 		

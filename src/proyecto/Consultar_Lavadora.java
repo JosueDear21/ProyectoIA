@@ -43,6 +43,7 @@ public class Consultar_Lavadora extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Consultar_Lavadora() {
+		setTitle("CONSULTAR LAVADORA");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 		

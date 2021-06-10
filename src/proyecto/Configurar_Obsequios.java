@@ -37,6 +37,7 @@ public class Configurar_Obsequios extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Configurar_Obsequios() {
+		setTitle("CONFIGURACION DE OBSEQUIOS");
 		setBounds(100, 100, 460, 299);
 		getContentPane().setLayout(null);
 		

@@ -34,6 +34,7 @@ public class Generar_Reporte extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Generar_Reporte() {
+		setTitle("GENERAR REPORTE");
 		setBounds(100, 100, 461, 300);
 		getContentPane().setLayout(null);
 		

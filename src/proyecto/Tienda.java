@@ -15,21 +15,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JDesktopPane;
 import java.awt.FlowLayout;
-/*
-import proyecto.Acerca_Tienda;
-import proyecto.Configurar_Cantidad_Optima;
-import proyecto.Configurar_Cuota_Diaria;
-import proyecto.Configurar_Descuento;
-import proyecto.Configurar_Obsequios;
-import proyecto.Consultar_Lavadora;
-import proyecto.Generar_Reporte;
-import proyecto.Listar_Lavadora;
-import proyecto.Mod_Lavadora;
-import proyecto.Vender;
-import proyecto.Lista_Lavadora;
-*/
-
-
 
 public class Tienda extends JFrame implements ActionListener {
 
@@ -203,6 +188,13 @@ public class Tienda extends JFrame implements ActionListener {
 		Consultar_Lavadora consultar = new Consultar_Lavadora();
 		escritorio.add(consultar);
 		consultar.setVisible(true);
+		try {
+
+	        consultar.setMaximum(true);
+
+		} catch(Exception excepcion){
+				JOptionPane.showMessageDialog(null, "Error");
+		}
 	}
 	
 	//Mantenimiento - Modificar Lavadora
@@ -215,6 +207,13 @@ public class Tienda extends JFrame implements ActionListener {
 		Mod_Lavadora modificar = new Mod_Lavadora();
 		escritorio.add(modificar);
 		modificar.setVisible(true);
+		try {
+
+	        modificar.setMaximum(true);
+
+		} catch(Exception excepcion){
+				JOptionPane.showMessageDialog(null, "Error");
+		}
 	}
 	
 	//Mantenimiento - Listar Lavadoras
@@ -227,6 +226,13 @@ public class Tienda extends JFrame implements ActionListener {
 		Listar_Lavadora listar = new Listar_Lavadora();
 		escritorio.add(listar);
 		listar.setVisible(true);
+		try {
+
+	        listar.setMaximum(true);
+
+		} catch(Exception excepcion){
+				JOptionPane.showMessageDialog(null, "Error");
+		}
 	}
 	
 	//Ventas - Vender
@@ -239,6 +245,13 @@ public class Tienda extends JFrame implements ActionListener {
 		Vender _vender = new Vender();
 		escritorio.add(_vender);
 		_vender.setVisible(true);
+		try {
+
+	        _vender.setMaximum(true);
+
+		} catch(Exception excepcion){
+				JOptionPane.showMessageDialog(null, "Error");
+		}
 	}
 	
 	//Ventas - Generar Reporte
@@ -251,6 +264,13 @@ public class Tienda extends JFrame implements ActionListener {
 		Generar_Reporte reporte = new Generar_Reporte();
 		escritorio.add(reporte);
 		reporte.setVisible(true);
+		try {
+
+	        reporte.setMaximum(true);
+
+		} catch(Exception excepcion){
+				JOptionPane.showMessageDialog(null, "Error");
+		}
 	}
 	
 	//Configuracion - Generar Descuento
@@ -263,6 +283,13 @@ public class Tienda extends JFrame implements ActionListener {
 		Configurar_Descuento descuento = new Configurar_Descuento();
 		escritorio.add(descuento);
 		descuento.setVisible(true);
+		try {
+
+	        descuento.setMaximum(true);
+
+		} catch(Exception excepcion){
+				JOptionPane.showMessageDialog(null, "Error");
+		}
 	}
 	
 	//Configuracion - Configurar Obsequio
@@ -275,6 +302,13 @@ public class Tienda extends JFrame implements ActionListener {
 		Configurar_Obsequios obsequio = new Configurar_Obsequios();
 		escritorio.add(obsequio);
 		obsequio.setVisible(true);
+		try {
+
+	        obsequio.setMaximum(true);
+
+		} catch(Exception excepcion){
+				JOptionPane.showMessageDialog(null, "Error");
+		}
 	}
 	
 	//Configuracion - Configurar Cantidad
@@ -287,6 +321,13 @@ public class Tienda extends JFrame implements ActionListener {
 		Configurar_Cantidad_Optima optima = new Configurar_Cantidad_Optima();
 		escritorio.add(optima);
 		optima.setVisible(true);
+		try {
+
+	        optima.setMaximum(true);
+
+		} catch(Exception excepcion){
+				JOptionPane.showMessageDialog(null, "Error");
+		}
 	}
 	
 	//Configuracion - Configurar Cuota Diaria
@@ -299,6 +340,13 @@ public class Tienda extends JFrame implements ActionListener {
 		Configurar_Cuota_Diaria cuota = new Configurar_Cuota_Diaria();
 		escritorio.add(cuota);
 		cuota.setVisible(true);
+		try {
+
+	        cuota.setMaximum(true);
+
+		} catch(Exception excepcion){
+				JOptionPane.showMessageDialog(null, "Error");
+		}
 	}
 	
 	//Ayuda - Acerca de Tienda
@@ -310,6 +358,13 @@ public class Tienda extends JFrame implements ActionListener {
 	public void AcercaDeTienda() {
 		Acerca_Tienda acerca = new Acerca_Tienda();
 		escritorio.add(acerca);
-		acerca.setVisible(true);				
+		acerca.setVisible(true);
+		try {
+
+	        acerca.setMaximum(true);
+
+		} catch(Exception excepcion){
+				JOptionPane.showMessageDialog(null, "Error");
+		}
 	}
 }
