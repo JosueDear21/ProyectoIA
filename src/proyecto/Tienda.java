@@ -9,8 +9,12 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
-public class Tienda extends JFrame {
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Tienda extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	private JMenuBar menuBar;
@@ -61,6 +65,7 @@ public class Tienda extends JFrame {
 		menuBar.add(mnArchivo);
 		
 		mniSalir = new JMenuItem("Salir");
+		mniSalir.addActionListener(this);
 		mnArchivo.add(mniSalir);
 		
 		mnMantenimiento = new JMenu("Mantenimiento");
@@ -108,5 +113,21 @@ public class Tienda extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == mniSalir) {
+			actionPerformedMniSalir(e);
+		}
+	}
+	protected void actionPerformedMniSalir(ActionEvent e) {
+		Salir();
+	}
+	//Metodo Salir
+	public void Salir() {
+		int valor = JOptionPane.showConfirmDialog(this,"Desea salir del programa", "Advertencia", JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
+		if(valor == JOptionPane.YES_OPTION) {
+			JOptionPane.showMessageDialog(this, "Gracias por usar nuestro software","Agradecimiento",JOptionPane.INFORMATION_MESSAGE);
+			System.exit(0);
+		}
 	}
 }
