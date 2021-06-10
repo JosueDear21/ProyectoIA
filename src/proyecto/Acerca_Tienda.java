@@ -3,8 +3,11 @@ package proyecto;
 import java.awt.EventQueue;
 
 import javax.swing.JInternalFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
 
 public class Acerca_Tienda extends JInternalFrame {
+	private JPanel panel;
 
 	/**
 	 * Launch the application.
@@ -27,6 +30,9 @@ public class Acerca_Tienda extends JInternalFrame {
 	 */
 	public Acerca_Tienda() {
 		setBounds(100, 100, 450, 300);
+		
+		panel = new JPanel();
+		getContentPane().add(panel, BorderLayout.CENTER);
 
 	}
 
