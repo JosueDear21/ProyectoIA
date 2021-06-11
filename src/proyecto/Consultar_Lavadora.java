@@ -12,8 +12,10 @@ import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ComponentListener;
 import java.awt.event.ComponentEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class Consultar_Lavadora extends JInternalFrame implements ItemListener, ComponentListener {
+public class Consultar_Lavadora extends JInternalFrame implements ItemListener, ComponentListener, ActionListener {
 	private JLabel lblModelo;
 	private JLabel lblPrecio;
 	private JLabel lblAncho;
@@ -114,6 +116,7 @@ public class Consultar_Lavadora extends JInternalFrame implements ItemListener, 
 		getContentPane().add(txtCapacidad);
 		
 		btnCerrar = new JButton("Cerrar");
+		btnCerrar.addActionListener(this);
 		btnCerrar.setBounds(312, 11, 89, 23);
 		getContentPane().add(btnCerrar);
 
@@ -130,7 +133,7 @@ public class Consultar_Lavadora extends JInternalFrame implements ItemListener, 
 	
 	private void Mostrar() {
 		if(cboModeloLavadora.getSelectedIndex()==0) {
-			txtPrecio.setText(String.valueOf(Lista_Lavadora.precio0));
+			this.txtPrecio.setText(String.valueOf(Lista_Lavadora.precio0));
 			txtFondo.setText(String.valueOf(Lista_Lavadora.fondo0));
 			txtAncho.setText(String.valueOf(Lista_Lavadora.ancho0));
 			txtAlto.setText(String.valueOf(Lista_Lavadora.alto0));
@@ -180,6 +183,7 @@ public class Consultar_Lavadora extends JInternalFrame implements ItemListener, 
 	}
 	protected void componentShownThis(ComponentEvent e) {
 		Lista();
+		//ListaModelo
 	}
 	private void Lista() {
 		cboModeloLavadora.addItem(Lista_Lavadora.modelo0);
@@ -200,4 +204,12 @@ public class Consultar_Lavadora extends JInternalFrame implements ItemListener, 
 		cboModeloLavadora.setModel(modelo);
 	}
 	*/
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnCerrar) {
+			actionPerformedBtnCerrar(e);
+		}
+	}
+	protected void actionPerformedBtnCerrar(ActionEvent e) {
+		dispose();
+	}
 }
