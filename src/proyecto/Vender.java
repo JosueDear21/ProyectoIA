@@ -40,7 +40,7 @@ public class Vender extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Vender() {
-		setTitle("VENTANAS DE VENTAS");
+		setTitle("VENTANA DE VENTAS");
 		setBounds(100, 100, 465, 301);
 		getContentPane().setLayout(null);
 		
