@@ -4,10 +4,15 @@ import java.awt.EventQueue;
 
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.event.InternalFrameListener;
+import javax.swing.event.InternalFrameEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class Configurar_Descuento extends JInternalFrame {
+public class Configurar_Descuento extends JInternalFrame implements InternalFrameListener, ActionListener {
 	private JLabel lblunidad1a5;
 	private JLabel lblunidad5a10;
 	private JLabel lblunidad11a15;
@@ -43,6 +48,7 @@ public class Configurar_Descuento extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public Configurar_Descuento() {
+		addInternalFrameListener(this);
 		setTitle("CONFIGURACION DE DESCUENTO");
 		setBounds(100, 100, 467, 295);
 		getContentPane().setLayout(null);
@@ -100,13 +106,56 @@ public class Configurar_Descuento extends JInternalFrame {
 		getContentPane().add(lblNewLabel_3);
 		
 		btnAceptar = new JButton("Aceptar");
+		btnAceptar.addActionListener(this);
 		btnAceptar.setBounds(345, 17, 89, 23);
 		getContentPane().add(btnAceptar);
 		
 		btnCancelar = new JButton("Cancelar");
+		btnCancelar.addActionListener(this);
 		btnCancelar.setBounds(345, 42, 89, 23);
 		getContentPane().add(btnCancelar);
 
 	}
 
+	public void internalFrameActivated(InternalFrameEvent e) {
+	}
+	public void internalFrameClosed(InternalFrameEvent e) {
+	}
+	public void internalFrameClosing(InternalFrameEvent e) {
+	}
+	public void internalFrameDeactivated(InternalFrameEvent e) {
+	}
+	public void internalFrameDeiconified(InternalFrameEvent e) {
+	}
+	public void internalFrameIconified(InternalFrameEvent e) {
+	}
+	public void internalFrameOpened(InternalFrameEvent e) {
+		if (e.getSource() == this) {
+			internalFrameOpenedThis(e);
+		}
+	}
+	protected void internalFrameOpenedThis(InternalFrameEvent e) {
+		txt1a5Unidades.setText(String.valueOf(Lista_Lavadora.porcentaje1));
+		txt6a10Unidades.setText(String.valueOf(Lista_Lavadora.porcentaje2));
+		txt11a15Unidades.setText(String.valueOf(Lista_Lavadora.porcentaje3));
+		txtMas15Unidades.setText(String.valueOf(Lista_Lavadora.porcentaje4));
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnCancelar) {
+			actionPerformedBtnCancelar(e);
+		}
+		if (e.getSource() == btnAceptar) {
+			actionPerformedBtnAceptar(e);
+		}
+	}
+	protected void actionPerformedBtnAceptar(ActionEvent e) {
+		Lista_Lavadora.porcentaje1=Double.parseDouble(txt1a5Unidades.getText());
+		Lista_Lavadora.porcentaje2=Double.parseDouble(txt6a10Unidades.getText());
+		Lista_Lavadora.porcentaje3=Double.parseDouble(txt11a15Unidades.getText());
+		Lista_Lavadora.porcentaje4=Double.parseDouble(txtMas15Unidades.getText());
+		JOptionPane.showMessageDialog(null, "Modificacion grabada");
+	}
+	protected void actionPerformedBtnCancelar(ActionEvent e) {
+		dispose();
+	}
 }

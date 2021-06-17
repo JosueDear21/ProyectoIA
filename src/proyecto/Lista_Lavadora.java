@@ -45,6 +45,7 @@ public class Lista_Lavadora {
 	public static String obsequio1 = "Cafetera";
 	public static String obsequio2 = "Licuadora";
 	public static String obsequio3 = "Extractor";
+	public static String obsequio4 = "Microondas";
 	// Cantidad óptima de unidades vendidas
 	public static int cantidadOptima = 10;
 	// Cuota diaria
